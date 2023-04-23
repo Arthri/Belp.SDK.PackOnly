@@ -1,9 +1,5 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
-
-
-
   <!-- Configure project as pack-only -->
   <PropertyGroup>
     <!-- Disable Build -->
@@ -13,6 +9,10 @@
     -->
     <NoBuild Condition="'$(DisableDefaultBuild)' != 'false'">true</NoBuild>
   </PropertyGroup>
+
+
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 
 
 
