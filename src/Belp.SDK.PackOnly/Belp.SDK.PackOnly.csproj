@@ -12,6 +12,7 @@
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Arthri/Belp.SDK.PackOnly/</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>msbuild;sdk</PackageTags>
     <Product>Belp</Product>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -24,6 +25,7 @@
   <!-- Package Assets Configuration -->
   <ItemGroup>
     <None Include="Assets\**\*" Pack="true" PackagePath="/" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 
 
