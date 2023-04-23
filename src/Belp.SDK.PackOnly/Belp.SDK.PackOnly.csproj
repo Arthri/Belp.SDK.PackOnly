@@ -40,6 +40,13 @@
 
 
 
+  <Target Name="_EXPORT_PACKAGE_OUTPUT_PATH" AfterTargets="Pack" Condition="'$(BELP_OUTPUT_PACKAGE_TO_CI)' == 'true'">
+    <Error Text="%24%28GITHUB_OUTPUT%29 is undefined" Condition="'$(GITHUB_OUTPUT)' == ''" />
+    <WriteLinesToFile File="$(GITHUB_OUTPUT)" Lines="PACKAGE_OUTPUT_PATH=$(PackageOutputAbsolutePath)" />
+  </Target>
+
+
+
   <Import Project="Assets\Sdk\Sdk.targets" />
 
 </Project>
