@@ -1,0 +1,34 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+
+
+  <!-- Clear out build tasks -->
+  <!--
+    This needs to be in targets,
+    so the project can configure $(DisableDefaultBuild).
+  -->
+  <PropertyGroup Condition="'$(DisableDefaultBuild)' != 'false'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <BuildDependsOn></BuildDependsOn>
+  </PropertyGroup>
+
+
+
+  <!-- Fixes Incremental Builds for dotnet/project-system -->
+  <Target Name="CollectUpToDateCheckInputDesignTime" Returns="@(UpToDateCheckInput)">
+    <ItemGroup>
+      <UpToDateCheckInput Include="@(None)" Condition="'%(None.Pack)' == 'true'" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="CollectUpToDateCheckOutputDesignTime" Returns="@(UpToDateCheckOutput)" />
+
+  <Target Name="CollectUpToDateCheckBuiltDesignTime" Returns="@(UpToDateCheckBuilt)">
+    <ItemGroup>
+      <UpToDateCheckBuilt Include="$(PackageOutputPath)$(PackageId).$([System.Text.RegularExpressions.Regex]::Replace('$(PackageVersion)', '\.0+$', '')).nupkg" />
+    </ItemGroup>
+  </Target>
+
+</Project>

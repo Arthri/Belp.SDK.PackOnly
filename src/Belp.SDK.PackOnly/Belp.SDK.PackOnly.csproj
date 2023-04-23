@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="Assets\Sdk\Sdk.props" />
+
+
+
+  <!-- Package Information -->
+  <PropertyGroup>
+    <Authors>Arthri</Authors>
+    <Copyright>Copyright © 2023 Arthri</Copyright>
+    <Description>An SDK for projects that are only packed, not built.</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Arthri/Belp.SDK.PackOnly/</PackageProjectUrl>
+    <PackageTags>msbuild;sdk</PackageTags>
+    <Product>Belp</Product>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <Title>PackOnly SDK</Title>
+    <Version>0.1.0.0</Version>
+  </PropertyGroup>
+
+
+
+  <!-- Development Dependencies -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+
+  <Import Project="Assets\Sdk\Sdk.targets" />
+
+</Project>
