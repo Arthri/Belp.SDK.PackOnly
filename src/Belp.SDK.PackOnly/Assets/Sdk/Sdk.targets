@@ -4,14 +4,14 @@
 
 
 
-  <!-- Clear out build tasks -->
-  <!--
-    This needs to be in targets,
-    so the project can configure $(DisableDefaultBuild).
-  -->
-  <PropertyGroup Condition="'$(DisableDefaultBuild)' != 'false'">
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <BuildDependsOn></BuildDependsOn>
+  <!-- Configure project as pack-only -->
+  <PropertyGroup>
+    <!-- Disable Build -->
+    <!--
+      This needs to be in targets,
+      so the project can configure $(DisableDefaultBuild).
+    -->
+    <NoBuild Condition="'$(DisableDefaultBuild)' != 'false'">true</NoBuild>
   </PropertyGroup>
 
 
