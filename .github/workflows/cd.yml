@@ -31,5 +31,5 @@ jobs:
 
       - name: Publish Package
         env:
-          NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
-        run: dotnet nuget push ${{ steps.build.outputs.PACKAGE_OUTPUT_PATH }}*.nupkg -k "$NUGET_TOKEN" -s "https://api.nuget.org/v3/index.json"
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push ${{ steps.build.outputs.PACKAGE_OUTPUT_PATH }}*.nupkg -k "$NUGET_API_KEY" -s "https://api.nuget.org/v3/index.json"
