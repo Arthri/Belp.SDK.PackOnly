@@ -1,8 +1,4 @@
-<Project>
-
-  <Import Project="Assets\Sdk\Sdk.props" />
-
-
+<Project Sdk="Belp.SDK.PackOnly/0.1.0">
 
   <!-- Package Information -->
   <PropertyGroup>
@@ -44,9 +40,5 @@
     <Error Text="%24%28GITHUB_OUTPUT%29 is undefined" Condition="'$(GITHUB_OUTPUT)' == ''" />
     <WriteLinesToFile File="$(GITHUB_OUTPUT)" Lines="PACKAGE_OUTPUT_PATH=$(PackageOutputAbsolutePath)" />
   </Target>
-
-
-
-  <Import Project="Assets\Sdk\Sdk.targets" />
 
 </Project>
