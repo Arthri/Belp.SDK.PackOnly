@@ -1,0 +1,10 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - release/nuget
+
+jobs:
+  deploy:
+    uses: Arthri/deploy-nuget/.github/workflows/deploy.yml@v1
