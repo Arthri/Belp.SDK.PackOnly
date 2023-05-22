@@ -1,10 +1,13 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - release/nuget
+  release:
+    types:
+      - published
 
 jobs:
   deploy:
     uses: Arthri/deploy_nuget/.github/workflows/deploy.yml@v1
+    with:
+      changelog: ${{ github.event.release.body }}
+      version: ${{ github.event.release.tag_name }}
