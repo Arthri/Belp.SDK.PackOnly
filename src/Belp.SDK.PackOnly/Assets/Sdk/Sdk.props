@@ -17,6 +17,6 @@
 
 
 
-  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.props" Sdk="Belp.SDK.Common/0.1.0" />
 
 </Project>
