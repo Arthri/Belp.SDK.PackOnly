@@ -23,7 +23,7 @@ By default, the target framework is set to .NET Standard 2.0. This can be overri
 
 ## Development
 
-### Prequisites
+### Prerequisites
 - Install .NET 7.0 SDK version 7.0.100 or newer.
 
 ### Building (with Visual Studio)
