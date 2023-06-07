@@ -13,7 +13,7 @@
 
 
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
-  <Import Project="Sdk.targets" Sdk="Belp.SDK.Common" Version="0.1.0" />
+  <Import Project="Sdk.targets" Sdk="Belp.SDK.Common" Version="0.2.0" />
 
 
 
