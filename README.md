@@ -38,4 +38,4 @@ By default, the target framework is set to .NET Standard 2.0. This can be overri
 1. Run `dotnet pack`
 
 ### Output
-The output is located in `src/Belp.SDK.PackOnly/Belp.SDK.PackOnly/bin/<CONFIGURATION>`.
+The output is located in `src/Belp.SDK.PackOnly/Belp.SDK.PackOnly/bin/Release`.
