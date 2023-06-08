@@ -19,8 +19,8 @@
 
   <!-- Package Assets Configuration -->
   <ItemGroup>
-    <None Include="Assets\**\*" Pack="true" PackagePath="/" />
-    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <None Include="Assets\**\*" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 
@@ -32,12 +32,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
-
-
-  <Target Name="_ExposeCIVariables" AfterTargets="Pack" Condition="'$(BELP_EXPOSE_CI_VARIABLES)' == 'true'">
-    <Error Text="%24%28GITHUB_OUTPUT%29 is undefined" Condition="'$(GITHUB_OUTPUT)' == ''" />
-    <WriteLinesToFile File="$(GITHUB_OUTPUT)" Lines="PACKAGE_OUTPUT_PATH=$(PackageOutputAbsolutePath)" />
-  </Target>
 
 </Project>
