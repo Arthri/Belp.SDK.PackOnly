@@ -4,7 +4,6 @@
 
   <!-- Package Information -->
   <PropertyGroup>
-    <Authors>Arthri</Authors>
     <Description>An SDK for projects that are only packed, not built.</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
