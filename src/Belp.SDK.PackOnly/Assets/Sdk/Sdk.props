@@ -10,7 +10,7 @@
 
 
   <ItemGroup>
-    <PackageReference Condition="'$(ReferencePackinf)' != 'false'" Include="Belp.Build.Packinf" Version="0.2.0" PrivateAssets="all" IncludeAssets="all" />
+    <PackageReference Condition="'$(ReferencePackinf)' != 'false'" Include="Belp.Build.Packinf" Version="0.3.0" PrivateAssets="all" IncludeAssets="all" />
   </ItemGroup>
 
 
