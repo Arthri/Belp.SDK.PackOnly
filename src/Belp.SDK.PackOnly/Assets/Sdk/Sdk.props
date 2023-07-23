@@ -21,6 +21,8 @@
 
 
   <PropertyGroup>
+    <AddMetapackagePlaceholderLibrary>true</AddMetapackagePlaceholderLibrary>
+
     <EnableDefaultItems>false</EnableDefaultItems>
 
     <!-- Do not include build output in package -->
