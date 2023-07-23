@@ -1,4 +1,6 @@
-<Project Sdk="Belp.SDK.PackOnly/0.1.0">
+<Project>
+
+  <Import Project="Assets/Sdk/Sdk.props" />
 
   <!-- Package Information -->
   <PropertyGroup>
@@ -22,14 +24,12 @@
 
   <!-- Development Dependencies -->
   <ItemGroup>
-    <PackageReference Include="Belp.Build.Packinf" Version="0.2.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+
+  <Import Project="Assets/Sdk/Sdk.targets" />
 
 </Project>
