@@ -17,6 +17,12 @@
 
 
 
+  <ItemGroup>
+    <PackageReference Condition="'$(ReferencePackinf)' != 'false'" Include="Belp.Build.Packinf" Version="0.2.0" PrivateAssets="all" IncludeAssets="all" />
+  </ItemGroup>
+
+
+
   <Import Project="Sdk.props" Sdk="Belp.SDK.Common" Version="0.2.0" />
   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 

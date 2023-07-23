@@ -3,7 +3,6 @@
   <!-- Package Information -->
   <PropertyGroup>
     <Authors>Arthri</Authors>
-    <Copyright>Copyright © 2023 Arthri</Copyright>
     <Description>An SDK for projects that are only packed, not built.</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -15,18 +14,18 @@
     <Title>PackOnly SDK</Title>
   </PropertyGroup>
 
-
-
-  <!-- Package Assets Configuration -->
   <ItemGroup>
-    <None Include="Assets\**\*" Pack="true" PackagePath="\" />
-    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <CopyrightOwner Include="Arthri" Years="2023" />
   </ItemGroup>
 
 
 
   <!-- Development Dependencies -->
   <ItemGroup>
+    <PackageReference Include="Belp.Build.Packinf" Version="0.2.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
