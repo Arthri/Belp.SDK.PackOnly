@@ -6,11 +6,11 @@ An MSBuild SDK for pack-only projects.
 ### Requirements
 - A project written in SDK-style. This includes any project for .NET Core(or newer) or .NET 5(or newer).
 
-### Install in Project Manually
+### Install using an Editor
 1. Locate the project file(for example, `Project.csproj`, `Project.fsproj`).
 1. Open the project file in an editor.
 1. Locate the project's root `<Project>` element.
-1. Edit the `Sdk` attribute's value to `Sdk="Belp.SDK.PackOnly/<VERSION>"`, for example `Sdk="Belp.SDK.PackOnly/1.0.0"`.
+1. Edit the `Sdk` attribute's value to `Belp.SDK.PackOnly/<VERSION>`. For example, `Sdk="Belp.SDK.PackOnly/1.0.0"`.
 
 ## Usage
 
@@ -25,17 +25,17 @@ By default, the target framework is set to .NET Standard 2.0. This can be overri
 ## Development
 
 ### Prerequisites
-- Install .NET 7.0 SDK version 7.0.100 or newer.
+- Install the .NET 7.0 SDK version 7.0.100 or newer.
 
-### Building (with Visual Studio)
+### Building with Visual Studio
 1. Open `Belp.SDK.PackOnly.sln`.
 1. Open the Solution Explorer.
 1. Right click on the project `Belp.SDK.PackOnly` in the Solution Explorer.
 1. Click on `Pack`.
 
-### Building (with .NET CLI)
+### Building with .NET CLI
 1. Open a terminal in the repository root.
 1. Run `dotnet pack`
 
 ### Output
-The output is located in `src/Belp.SDK.PackOnly/Belp.SDK.PackOnly/bin/Release`.
+By default, the output is located in `src/Belp.SDK.PackOnly/Belp.SDK.PackOnly/bin/Release/`.

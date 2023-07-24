@@ -5,6 +5,23 @@
     <!-- Make Release the default and only configuration -->
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <Configurations>Release</Configurations>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <PackageReference Condition="'$(ReferencePackinf)' != 'false'" Include="Belp.Build.Packinf" Version="0.3.0" PrivateAssets="all" IncludeAssets="all" />
+  </ItemGroup>
+
+
+
+  <Import Project="Sdk.props" Sdk="Belp.SDK.Common" Version="0.2.0" />
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+
+
+  <PropertyGroup>
+    <AddMetapackagePlaceholderLibrary>true</AddMetapackagePlaceholderLibrary>
 
     <EnableDefaultItems>false</EnableDefaultItems>
 
@@ -14,10 +31,5 @@
     <!-- Set default target framework. Projects can override it if needed -->
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
-
-
-  <Import Project="Sdk.props" Sdk="Belp.SDK.Common" Version="0.2.0" />
-  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 
 </Project>
