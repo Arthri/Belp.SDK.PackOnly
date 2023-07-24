@@ -1,6 +1,4 @@
-<Project>
-
-  <Import Project="Assets/Sdk/Sdk.props" />
+<Project Sdk="Belp.SDK.PackOnly/0.4.0">
 
   <!-- Package Information -->
   <PropertyGroup>
@@ -27,7 +25,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
-  <Import Project="Assets/Sdk/Sdk.targets" />
 
 </Project>
